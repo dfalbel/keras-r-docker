@@ -3,7 +3,7 @@ MAINTAINER decryptr <dfalbel@gmail.com>
 
 RUN \
   apt-get update && apt-get install -y apt-transport-https && \
-  apt-get install -y python python-dev python-pip python-virtualenv libssl-dev libjpeg-dev && \
+  apt-get install -y python python-dev python-pip python-virtualenv libssl-dev libjpeg-dev libmagick++-dev && \
   rm -rf /var/lib/apt/lists/*
 
 RUN R -e "install.packages(c('keras', 'plumber', 'yaml', 'base64enc', 'remotes'))"
